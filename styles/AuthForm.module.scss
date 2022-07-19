@@ -1,0 +1,85 @@
+.authWrapper {
+  display: flex;
+  max-width: 1440px;
+  .auth {
+    margin: 175px auto 0;
+    width: 95%;
+    max-width: 30rem;
+    border-radius: 30px;
+    background-color: white;
+    padding: 3rem;
+    text-align: center;
+    color: black;
+    box-shadow: 0 0 20px rgb(0 0 0 / 10%);
+    @media screen and (max-width: 426px) {
+      margin: 165px auto 0;
+    }
+    p {
+      color: black;
+      font-size: 21px;
+      text-align: center;
+    }
+    .control {
+      margin-bottom: 0.5rem;
+      label {
+        display: block;
+        color: black;
+        margin-bottom: 0.5rem;
+        text-align: left;
+        font-size: 15px;
+      }
+      input {
+        font-size: 20px;
+        height: 45px;
+        font-family: sans-serif;
+        color: #41464b;
+        border-radius: 22px;
+        outline: none;
+        border: none;
+        background-color: aliceblue;
+        width: 100%;
+        text-align: left;
+        padding: 4px 25px;
+        &:focus {
+          border: solid #0d6efd52 1px;
+        }
+      }
+    }
+    .actions {
+      margin-top: 44px;
+      margin-bottom: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      button {
+        display: block;
+        width: 100%;
+        background-color: #1087ff;
+        border: none;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+        border-radius: 4px;
+        padding: 0.5rem 2.5rem;
+        &:hover {
+          opacity: 0.7;
+          color: black;
+        }
+      }
+      .toggle {
+        margin-top: 1rem;
+        background-color: transparent;
+        color: #9f5ccc;
+        border: none;
+        padding: 0.15rem 1.5rem;
+        &:hover {
+          background-color: transparent;
+          color: #ae82cc;
+        }
+      }
+    }
+  }
+  .authRightSection {
+    width: 50%;
+  }
+}

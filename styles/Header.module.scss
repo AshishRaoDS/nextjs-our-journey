@@ -1,0 +1,105 @@
+.header {
+  width: 100%;
+  position: fixed;
+  background: #ffffff;
+  top: 0;
+  padding-top: 2px;
+  z-index: 1;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  hr {
+    width: 400%;
+    margin-left: -100px;
+  }
+  .logoContainer {
+    display: flex;
+    justify-content: center;
+    .logo {
+      width: 100px;
+    }
+  }
+  .ourTime {
+    color: #2f353b;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .dropdown {
+    display: none;
+    @media screen and (max-width: 426px) {
+      display: block;
+    }
+    button {
+      height: 28px;
+      padding-top: 0;
+      background-color: #1087ff;
+      border: none;
+    }
+  }
+  .navigationContainer {
+    height: 30px;
+    background-color: #1087ff;
+    display: flex;
+    justify-content: center;
+    .ourTimeWrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding-left: 140px;
+      @media screen and (max-width: 426px) {
+        padding-left: 0;
+      }
+      .ourTime {
+        color: #2f353b;
+        font-weight: 600;
+        text-transform: uppercase;
+        padding-top: 0;
+        margin-top: -5px;
+        font-size: 21px;
+        margin-left: 5px;
+        @media screen and (max-width: 426px) {
+          margin-top: 2px;
+          font-size: 14px;
+        }
+      }
+    }
+    .headerNavigationCta {
+      margin-left: 5px;
+      height: 30px;
+      background-color: inherit;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 17px;
+      @media screen and (max-width: 426px) {
+        display: none;
+      }
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+.headerOnScroll {
+  padding-left: 100px;
+  .logoContainer {
+    display: flex;
+    justify-content: center;
+    transition: all ease-out 3s;
+    transform: translateX(-46%);
+    .logo {
+      animation: reduceSize ease-out 3s forwards;
+      @keyframes reduceSize {
+        0% {
+          width: 100px;
+        }
+        100% {
+          width: 69px;
+        }
+      }
+    }
+  }
+  .navigationContainer {
+    margin-left: -100px;
+  }
+}
