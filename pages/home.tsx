@@ -1,16 +1,16 @@
 import { NextPage } from 'next'
 import React from 'react'
-import AuthForm from '../components/Auth/AuthForm'
+import Content from '../components/Blog/Content'
 import Layout from '../components/Layout'
 
 type Props = {}
 
-const login: NextPage = (props: Props) => {
+const Home: NextPage = (props: Props) => {
   return (
     <Layout>
-      <AuthForm />
+      <Content />
     </Layout>
   )
 }
 
-export default login
+export default Home

@@ -1,0 +1,58 @@
+.container {
+  background-color: white;
+  margin: 118px 220px 0px;
+  padding: 20px;
+  padding-left: 55px;
+  padding-top: 25px;
+  box-shadow: 0 0 20px rgb(0 0 0 / 10%);
+  @media screen and (max-width: 426px) {
+    margin: 118px 0 0;
+    padding: 30px;
+  }
+  .scrollToBottom {
+    position: fixed;
+    bottom: 15px;
+    right: 145px;
+    border-radius: 100%;
+    width: 70px;
+    height: 70px;
+    border: none;
+    background-color: rgb(16, 135, 255);
+    @media screen and (max-width: 426px) {
+      bottom: 30px;
+      right: 45px;
+      width: 40px;
+      height: 40px;
+    }
+    .downArrow {
+      font-size: 32px;
+      @media screen and (max-width: 426px) {
+        font-size: 26px;
+      }
+    }
+  }
+  .dancingMinion {
+    height: 200px;
+  }
+  .title {
+    color: black;
+    font-weight: 700;
+  }
+  button {
+    display: block;
+    margin: 0 auto;
+    height: 50px;
+    width: 200px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(16, 135, 255);
+    font-size: 17px;
+    font-weight: 500;
+    color: aliceblue;
+    &:hover {
+      opacity: 0.6;
+      color: black;
+    }
+  }
+}
