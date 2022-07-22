@@ -7,6 +7,7 @@ import PartFour from './PartFour'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
+import PartFive from './PartFive'
 
 export type StateOfParts = {
   partOne: boolean;
@@ -106,6 +107,7 @@ const Content: React.FC = () => {
           partFourRef={partFourRef}
         />
       }
+      <PartFive />
     </div >
   )
 }
