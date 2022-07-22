@@ -61,7 +61,9 @@ const Content: React.FC = () => {
             icon={faArrowDown} />
         </button >
       }
-      <img
+      <Image
+        width={169}
+        height={200}
         className={styles.dancingMinion}
         src="https://media.giphy.com/media/3cKaKpl2OzqpfSPdUF/giphy.gif"
         alt="Dancing Minion" />

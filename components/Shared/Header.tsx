@@ -1,12 +1,11 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useState, useEffect, useContext } from 'react'
 import styles from "../../styles/Header.module.scss"
-import Logo from "../../assets/images/header-logo.png"
+// import Logo from "../assets/images/header-logo.png"
 import { Dropdown, Spinner } from 'react-bootstrap'
 // import AuthContext from '../../store/auth-context'
 import moment from "moment"
 import { useRouter } from "next/router"
-import Image from "next/image"
-
 
 const Header: React.FC = () => {
   const [isShrunk, setShrunk] = useState(false);
@@ -63,9 +62,9 @@ const Header: React.FC = () => {
   return (
     <div className={`${styles.header} ${isShrunk ? styles.headerOnScroll : ""}`}>
       <div className={styles.logoContainer}>
-        <Image
+        <img
           className={styles.logo}
-          src={Logo}
+          src="images/header-logo.png"
           alt="Cartoon monster with Tanaya's name" />
       </div>
       {/* {isLoggedIn ? */}
