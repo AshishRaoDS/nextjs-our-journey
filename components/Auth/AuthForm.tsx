@@ -1,5 +1,5 @@
 import { useState, useRef, useContext } from 'react';
-// import AuthContext from '../../store/auth-context';
+import AuthContext from '../../store/auth-context';
 import styles from '../../styles/AuthForm.module.scss';
 import axios from "axios";
 import { Spinner } from 'react-bootstrap';
@@ -11,7 +11,7 @@ const AuthForm = () => {
   const emailRef = useRef<HTMLInputElement>(null);
   const passwordRef = useRef<HTMLInputElement>(null);
 
-  // const { login } = useContext(AuthContext)
+  const { login } = useContext(AuthContext)
 
   const router = useRouter()
 
@@ -36,7 +36,7 @@ const AuthForm = () => {
       )
       const expirationTime = new Date((new Date().getTime() + (+response.data.expiresIn * 1000)))
       console.log(response.data)
-      // login(response.data.idToken, expirationTime.toISOString())
+      login(response.data.idToken, expirationTime.toISOString())
       router.replace("/home")
     } catch (error) {
       console.log(error)
