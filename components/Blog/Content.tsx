@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useRef, useEffect, useContext } from 'react'
 import styles from '../../styles/Content.module.scss'
 import PartOne from './PartOne'
 import PartTwo from './PartTwo'
@@ -8,6 +8,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
 import PartFive from './PartFive'
+import { useRouter } from 'next/router'
+import AuthContext from '../../store/auth-context'
 
 export type StateOfParts = {
   partOne: boolean;
@@ -17,6 +19,10 @@ export type StateOfParts = {
 }
 
 const Content: React.FC = () => {
+  const { isLoggedIn } = useContext(AuthContext)
+
+  const router = useRouter()
+
   const [stateOfParts, setStateOfParts] = useState<StateOfParts>({
     partOne: false,
     partTwo: false,
@@ -40,6 +46,12 @@ const Content: React.FC = () => {
       behavior: "smooth"
     })
   }
+
+  useEffect(() => {
+    if (!isLoggedIn) {
+      router.replace("/login")
+    }
+  }, [isLoggedIn, router])
 
   useEffect(() => {
     if (partFourRef.current) {

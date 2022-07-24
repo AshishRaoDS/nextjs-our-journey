@@ -1,11 +1,14 @@
 import { NextPage } from 'next'
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import Content from '../components/Blog/Content'
 import Layout from '../components/Layout'
+import AuthContext from '../store/auth-context'
+import { useRouter } from "next/router"
 
 type Props = {}
 
 const Home: NextPage = (props: Props) => {
+
   return (
     <Layout>
       <Content />

@@ -19,8 +19,9 @@ const calculateRemainingTime = (expirationTime: string) => {
 }
 
 const retrieveStoredToken = () => {
-  const storedToken = localStorage.getItem("token")
-  const expirationTime = localStorage.getItem("expirationTime") || "";
+
+  const storedToken = typeof window !== "undefined" && localStorage.getItem("token")
+  const expirationTime = typeof window !== "undefined" && localStorage.getItem("expirationTime") || "";
 
   const remainingTime = calculateRemainingTime(expirationTime)
 

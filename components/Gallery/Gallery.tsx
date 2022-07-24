@@ -1,14 +1,26 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from 'react'
 import { Carousel } from 'react-bootstrap'
 import styles from "../../styles/Gallery.module.scss"
 import { drawings } from '../../store/drawingDetails'
 import { myWritings } from '../../store/myWritingDetails'
 import Image from 'next/image'
+import React, { useContext, useEffect } from 'react'
+import { useRouter } from "next/router"
+import AuthContext from '../../store/auth-context'
 
 type Props = {}
 
 const Gallery: React.FC<Props> = () => {
+  const { isLoggedIn } = useContext(AuthContext)
+
+  const router = useRouter()
+
+  useEffect(() => {
+    if (!isLoggedIn) {
+      router.replace("/login")
+    }
+  }, [isLoggedIn, router])
+
   return (
     <div className={styles.galleryContainer}>
       <section className={styles.carouselSection}>
