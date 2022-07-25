@@ -69,7 +69,7 @@ const Header: React.FC = () => {
       {isLoggedIn ?
         <div className={styles.navigationContainer}>
           <div className={styles.ourTimeWrapper}>
-            <Spinner animation="border" size="sm" style={{ marginTop: "8px", fontSize: "15px" }} />
+            <Spinner animation="border" size="sm" style={{ marginTop: "5px", fontSize: "17px", width: "20px", height: "20px" }} />
             <p className={styles.ourTime}>Our valuable time together - {dateSinceWeStartedOurRelationship}</p>
           </div>
           <button onClick={() => router.push("/home")} className={styles.headerNavigationCta}>Home</button>
