@@ -64,7 +64,7 @@ const Header: React.FC = () => {
         <img
           className={styles.logo}
           src="images/header-logo.png"
-          alt="Cartoon monster with Tanaya's name" />
+          alt="Blue owl with Tanaya's name underneath it" />
       </div>
       {isLoggedIn ?
         <div className={styles.navigationContainer}>
